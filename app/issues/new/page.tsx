@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Callout, Text, TextField } from '@radix-ui/themes';
+import { Button, Callout, Text, TextArea, TextField } from '@radix-ui/themes';
 import dynamic from 'next/dynamic';
 import { useForm, Controller } from 'react-hook-form';
 import axios from 'axios';
@@ -41,6 +41,7 @@ const NewIssuePage = () => {
 			setError('An unexpected error occurred.');
 		}
 	});
+
 	return (
 		<div className="max-w-xl">
 			{error && (
@@ -73,6 +74,10 @@ const NewIssuePage = () => {
 						/>
 					)}
 				/>
+				{/* <TextArea
+					placeholder="Description"
+					{...register('description')}
+				/> */}
 				<ErrorMessage>{errors.description?.message}</ErrorMessage>
 				<Button disabled={isSubmitting}>Submit New Issue {isSubmitting && <Spinner />}</Button>
 			</form>
