@@ -14,7 +14,7 @@ interface StatusContainer {
 	status: Status;
 }
 
-const IssueSummery = ({ open, inProgress, closed }: Props) => {
+const IssueSummary = ({ open, inProgress, closed }: Props) => {
 	const containers: StatusContainer[] = [
 		{ label: 'Open Issues', value: open, status: 'OPEN' },
 		{ label: 'In-progress Issues', value: inProgress, status: 'IN_PROGRESS' },
@@ -48,4 +48,4 @@ const IssueSummery = ({ open, inProgress, closed }: Props) => {
 	);
 };
 
-export default IssueSummery;
+export default IssueSummary;
